@@ -1,0 +1,110 @@
+/* Changes font for all computer code */
+.code {
+  font-family: monospace;
+  color: rgb(174, 4, 4);
+  padding: 10px;
+}
+
+/* Background color for all computer code */
+.highlightedCode {
+  margin: 0px;
+  background-color: rgb(237, 230, 230);
+  font-family: monospace;
+  color: rgb(174, 4, 4);
+  padding: 1px;
+}
+
+/* Background color for all note boxes */
+p.note {
+  background-color: lightblue;
+  padding: 1rem;
+}
+
+/* Background color for all caution boxes */
+p.caution {
+  background-color: rgb(244, 247, 159);
+  padding: 1rem;
+}
+
+/* Background color for all note boxes  */
+p.warning {
+  background-color: rgb(239, 74, 77);
+  padding: 1rem;
+}
+
+/* Console.log error display */
+p.error {
+  display: inline-block;
+  background-color: rgb(172, 48, 48);
+  color: white;
+  font-family: monospace;
+  padding: 2px;
+}
+
+/* Console.log display */
+p.console {
+  display: inline-block;
+  background-color: navy;
+  color: white;
+  font-family: monospace;
+  padding: 2px;
+}
+
+/* Outer example box */
+div.example {
+  display: inline-block;
+  border: 1px black solid;
+  background-color: rgb(238, 237, 236);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Inner example box */
+div.innerCode {
+  background-color: white;
+  text-align: left;
+}
+
+/* glossary link */
+.glink {
+  margin: 1em;
+}
+#glossaryTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#glossaryTable td,
+#glossaryTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#glossaryTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#glossaryTable tr:hover {
+  background-color: #ddd;
+}
+
+#glossaryTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+#elementsTable {
+  width: auto;
+  border-collapse: collapse;
+}
+#elementsTable th,
+#elementsTable td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+#elementsTable th {
+  background-color: #f2f2f2;
+}

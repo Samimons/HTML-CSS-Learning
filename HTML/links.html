@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Links</h1>
+    <a href="index.html">Index</a>
+    <hr />
+    <h2>Hyperlinks</h2>
+    <p>HTML links are hyperlinks.</p>
+    <p>
+      You can click on a link and jump to another document locally or a
+      completely different URL.
+    </p>
+    <p>
+      The HTML <span class="highlightedCode">&lta&gt</span> tag defines a
+      hyperlink. It has the following syntax:
+    </p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+&lta href="https://www.google.com/"&gtlink to Google&lt/a&gt</pre
+        >
+      </div>
+    </div>
+    <br />
+    <a href="https://www.google.com/">Link to Google</a>
+    <h2>The target Attribute</h2>
+    <p>
+      By default, the linked page will be displayed in the current browser
+      window. To change this, you must specify another target for the link.
+    </p>
+    <p>The target attribute specifies where to open the linked document.</p>
+    <p>The target attribute can have one of the following values:</p>
+    <ul>
+      <li>
+        <span class="highlightedCode">_self</span> - Default. Opens the document
+        in the same window/tab as it was clicked
+      </li>
+      <li>
+        <span class="highlightedCode">_blank</span> - Opens the document in a
+        new window or tab
+      </li>
+      <li>
+        <span class="highlightedCode">_parent</span> - Opens the document in the
+        parent frame
+      </li>
+      <li>
+        <span class="highlightedCode">_top</span> - Opens the document in the
+        full body of the window
+      </li>
+    </ul>
+    <h2>Absolute URLs vs. Relative URLs</h2>
+    <p>
+      The example above is using an absolute URL (a full web address) in the
+      href attribute.
+    </p>
+    <p>
+      A local link (a link to a page within the same website) is specified with
+      a relative URL (without the "https://www" part):
+    </p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">  &lta href="index.html"&gtIndex Page&lt/a&gt</pre>
+      </div>
+    </div>
+    <br />
+    <a href="index.html">Index Page</a>
+    <hr />
+    <h2>Use an Image as a Link</h2>
+    <p>
+      To use an image as a link, just put the &ltimg&gt tag inside the &lta&gt
+      tag:
+    </p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+  &lta href="https://www.google.com"&gt&ltimg src="../images/black puppy.jpg" <br> alt="Black puppy" style="width: 45px; height: 45px;"&gt&lt/a&gt</pre>
+      </div>
+    </div>
+    <br />
+    <br />
+    <a href="https://www.google.com"
+      ><img
+        src="../images/black puppy.jpg"
+        alt="Black puppy"
+        style="width: 55px; height: 55px"
+    /></a>
+    <hr />
+    <h2>Link Titles</h2>
+    <p>
+      The <span class="highlightedCode">title</span> attribute specifies extra
+      information about an element. The information is most often shown as a
+      tooltip text when the mouse moves over the element.
+    </p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+    &lta href="https://www.google.com" title="A link to Google.com"&gtGoogle.com&lt/a&gt</pre
+        >
+      </div>
+    </div>
+    <br />
+    <a href="https://www.google.com" title="A link to Google.com">Google.com</a>
+    <hr />
+    <h2>Bookmark Link</h2>
+    <p>Bookmarks can be useful if a web page is very long.</p>
+    <p>
+      To create a bookmark - first create the bookmark, then add a link to it.
+    </p>
+    <p>
+      When the link is clicked, the page will scroll down or up to the location
+      with the bookmark.
+    </p>
+    <p>First, use the id attribute to create a bookmark:</p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">&lth2 id="C4"&gtChapter 4&lt/h2&gt</pre>
+      </div>
+    </div>
+
+    <br />
+    <p>
+      Then, add a link to the bookmark ("Jump to Chapter 4"), from within the
+      same page:
+    </p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">&lta href="#C4"&gtJump to Chapter 4&lt/a&gt</pre>
+      </div>
+    </div>
+    <p>You can also add a link to a bookmark on another page:</p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+&lta href="html_demo.html#C4"&gtJump to Chapter 4&lt/a&gt</pre
+        >
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

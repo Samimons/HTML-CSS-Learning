@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Lists</h1>
+    <a href="index.html">Index</a>
+    <hr />
+    <p>
+      HTML lists allow web developers to group a set of related items in lists.
+    </p>
+    <hr />
+    <h2>Unordered Lists</h2>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+&ltul&gt;
+    &ltli&gtBread&lt/li&gt
+    &ltli&gtJam&lt/li&gt
+    &ltli&gtButter&lt/li&gt
+&lt/ul&gt;
+          </pre
+        >
+      </div>
+    </div>
+
+    <ul>
+      <li>Bread</li>
+      <li>Jam</li>
+      <li>Butter</li>
+    </ul>
+    <hr />
+    <h2>Ordered Lists</h2>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+  &ltol&gt;
+      &ltli&gtCoffee&lt/li&gt
+      &ltli&gtTea&lt/li&gt
+      &ltli&gtMilk&lt/li&gt
+  &lt/ol&gt;
+            </pre
+        >
+      </div>
+    </div>
+    <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <hr />
+    <h2>Discription List</h2>
+    <p>
+      A description list is a list of terms, with a description of each term.
+    </p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+  &ltdl&gt;
+      &ltdt&gtCoffee&lt/dt&gt
+      &ltdd&gt- black hot drink&lt/dd&gt
+      &ltdt&gtMilk&lt/dt&gt
+      &ltdd&gt- white cold drink&lt/dd&gt
+  &lt/dl&gt;
+            </pre
+        >
+      </div>
+    </div>
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- black hot drink</dd>
+      <dt>Milk</dt>
+      <dd>- white cold drink</dd>
+    </dl>
+    <hr />
+    <h2>Nested Lists</h2>
+    <p>Lists can be nested (list inside list):</p>
+    <div class="example">
+      <div class="exampleMain">
+        <h4>Example</h4>
+      </div>
+      <div class="innerCode">
+        <pre class="code">
+&ltul&gt;
+    &ltli&gtCoffee&ltli&gt
+    &ltli&gtTea
+            &ltol&gt
+                &ltli&gtBlack tea&ltli&gt
+                &ltli&gtGreen tea&ltli&gt
+            &lt/ol&gt
+    &lt/li&gt
+    &ltli&gtMilk&ltli&gt 
+&lt/ul&gt;
+  
+            </pre
+        >
+      </div>
+    </div>
+    <ul>
+      <li>Coffee</li>
+      <li>
+        Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+    <hr />
+  </body>
+</html>
