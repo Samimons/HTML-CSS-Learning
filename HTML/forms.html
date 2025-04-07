@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <a href="index.html">Index</a>
+    <hr />
+    <p>
+      An HTML form is used to collect user input. The user input is most often
+      sent to a server for processing.
+    </p>
+    <hr />
+    <h2>The &ltform&gt Element</h2>
+    <p>
+      The HTML &ltform&gt element is used to create an HTML form for user input.
+    </p>
+    <p>
+      The &ltform&gt element is a container for different types of input
+      elements, such as: text fields, checkboxes, radio buttons, submit buttons,
+      etc.
+    </p>
+    <p>
+      The HTML &ltform&gt element can contain one or more of the following form
+      elements:
+    </p>
+
+    <ul>
+      <li>input - defines a single-line text input field.</li>
+      <li>label - element defines a label for several form elements.</li>
+      <li>select</li>
+      <li>textarea</li>
+      <li>button</li>
+      <li>fireldset</li>
+      <li>legend</li>
+      <li>datalist</li>
+      <li>output</li>
+      <li>option</li>
+      <li>optgroup</li>
+    </ul>
+    <hr />
+
+    <h2>The &ltinput&gt Element</h2>
+    <p>The HTML &ltinput&gt element is the most used form element.</p>
+    <p>
+      An &ltinput&gt element can be displayed in many ways, depending on the
+      type attribute.
+    </p>
+    <ul>
+      <li>input type="button"</li>
+      <input type="button" name="" id="" />
+      <li>input type="checkbox"</li>
+      <input type="checkbox" />
+      <li>input type="color"</li>
+      <input type="color" />
+      <li>input type="date"</li>
+      <input type="date" />
+      <li>input type="datetime-local"</li>
+      <input type="datetime-local" />
+      <li>input type="email"</li>
+      <input type="email" />
+      <li>input type="file"</li>
+      <input type="file" />
+      <li>input type="hidden"</li>
+      <input type="hidden" />
+      <li>input type="image"</li>
+      <input type="image" />
+      <li>input type="month"</li>
+      <input type="month" />
+      <li>input type="number"</li>
+      <input type="number" />
+      <li>input type="password"</li>
+      <input type="password" />
+      <li>input type="radio"</li>
+      <input type="radio" />
+      <li>input type="range"</li>
+      <input type="range" />
+      <li>input type="reset"</li>
+      <input type="reset" />
+      <li>input type="search"</li>
+      <input type="search" />
+      <li>input type="submit"</li>
+      <input type="submit" />
+      <li>input type="tel"</li>
+      <input type="tel" />
+      <li>input type="text"</li>
+      <input type="text" />
+      <li>input type="time"</li>
+      <input type="time" />
+      <li>input type="url"</li>
+      <input type="url" />
+      <li>input type="week"</li>
+      <input type="week" />
+    </ul>
+    <p>Note: The default value of the type attribute is "text".</p>
+    <hr />
+    <h2>The &ltlabel&gt Element</h2>
+    <p>
+      The &ltlabel&gtcir; element is useful for screen-reader users, because the
+      screen-reader will read out loud the label when the user focus on the
+      input element.
+    </p>
+    <p>
+      The &ltlabel&gtrarr; element also help users who have difficulty clicking
+      on very small regions (such as radio buttons or checkboxes) - because when
+      the user clicks the text within the &ltlabel&gt element, it toggles the
+      radio button/checkbox.
+    </p>
+    <p>
+      The for attribute of the &ltlabel&gt tag should be equal to the id
+      attribute of the &ltinput&gt element to bind them together.
+    </p>
+    <hr />
+    <h2>The &ltselect&gt Element</h2>
+    <p>The &ltselect&gt element defines a drop-down list:</p>
+    <form action="/action_page.php">
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="submit" />
+    </form>
+    <p>The &ltoption&gt element defines an option that can be selected.</p>
+    <p>By default, the first item in the drop-down list is selected.</p>
+    <p>
+      To define a pre-selected option, add the selected attribute to the option:
+    </p>
+    <p>&ltoption value="fiat" selected&gtFiat&lt/option&gt</p>
+    <h3>Visible Values</h3>
+
+    <hr />
+  </body>
+</html>

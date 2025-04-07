@@ -26,7 +26,7 @@
       <div class="innerCode">
         <pre class="code">
 &lt!DOCTYPE html&gt
-&lthtml&gt;
+&lthtml lang="en"&gt;
 &lthead&gt;
 &lttitle&gtPage Title&lttitle&gt;
 &lt/head&gt;
@@ -47,14 +47,32 @@
         The &lt!DOCTYPE html&gt declaration defines that this document is an
         HTML5 document.
       </li>
-      <li>The &lthtml&gt element is the root element of an HTML page.</li>
+      <li>
+        The &lthtml lang="en"&gt element is the root element of an HTML page.
+        The lang="en" is mainly for screen readers to pronounce the language
+        better.
+      </li>
       <li>
         The &lthead&gt element contains meta information about the HTML page.
       </li>
-      <li>
-        The &lttitle&gt element specifies a title for the HTML page (which is
-        shown in the browser's title bar or in the page's tab).
-      </li>
+      <ul>
+        <li>
+          meta charset="UTF-8" - ensure characters are displayed properly.
+        </li>
+        <li>
+          &lttitle&gtMy Website&lt/title&gt - displays in browser tab bar.
+        </li>
+        <li>
+          &ltlink rel="stylesheet" href="style.css"&gt - links to CSS
+          stylesheet.
+        </li>
+        <li>
+          &ltmeta name="viewport" content="width=device-width,
+          initial-scale=1.0"&gt - how the website should be displayed relative
+          to your screen.
+        </li>
+      </ul>
+
       <li>
         The &ltbody&gt element defines the document's body, and is a container
         for all the visible contents, such as headings, paragraphs, images,
