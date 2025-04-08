@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <h1>Forms</h1>
@@ -14,126 +15,101 @@
       sent to a server for processing.
     </p>
     <hr />
-    <h2>The &ltform&gt Element</h2>
+    <h2>The <span class="highlightedCode">&ltform&gt</span> Element</h2>
     <p>
-      The HTML &ltform&gt element is used to create an HTML form for user input.
+      The HTML <span class="highlightedCode">&ltform&gt</span> element is used to create an HTML form for user input.
     </p>
     <p>
-      The &ltform&gt element is a container for different types of input
+      The <span class="highlightedCode">&ltform&gt</span> element is a container for different types of input
       elements, such as: text fields, checkboxes, radio buttons, submit buttons,
       etc.
     </p>
-    <p>
-      The HTML &ltform&gt element can contain one or more of the following form
-      elements:
-    </p>
-
-    <ul>
-      <li>input - defines a single-line text input field.</li>
-      <li>label - element defines a label for several form elements.</li>
-      <li>select</li>
-      <li>textarea</li>
-      <li>button</li>
-      <li>fireldset</li>
-      <li>legend</li>
-      <li>datalist</li>
-      <li>output</li>
-      <li>option</li>
-      <li>optgroup</li>
-    </ul>
-    <hr />
-
-    <h2>The &ltinput&gt Element</h2>
-    <p>The HTML &ltinput&gt element is the most used form element.</p>
-    <p>
-      An &ltinput&gt element can be displayed in many ways, depending on the
-      type attribute.
-    </p>
-    <ul>
-      <li>input type="button"</li>
-      <input type="button" name="" id="" />
-      <li>input type="checkbox"</li>
-      <input type="checkbox" />
-      <li>input type="color"</li>
-      <input type="color" />
-      <li>input type="date"</li>
-      <input type="date" />
-      <li>input type="datetime-local"</li>
-      <input type="datetime-local" />
-      <li>input type="email"</li>
-      <input type="email" />
-      <li>input type="file"</li>
-      <input type="file" />
-      <li>input type="hidden"</li>
-      <input type="hidden" />
-      <li>input type="image"</li>
-      <input type="image" />
-      <li>input type="month"</li>
-      <input type="month" />
-      <li>input type="number"</li>
-      <input type="number" />
-      <li>input type="password"</li>
-      <input type="password" />
-      <li>input type="radio"</li>
-      <input type="radio" />
-      <li>input type="range"</li>
-      <input type="range" />
-      <li>input type="reset"</li>
-      <input type="reset" />
-      <li>input type="search"</li>
-      <input type="search" />
-      <li>input type="submit"</li>
-      <input type="submit" />
-      <li>input type="tel"</li>
-      <input type="tel" />
-      <li>input type="text"</li>
-      <input type="text" />
-      <li>input type="time"</li>
-      <input type="time" />
-      <li>input type="url"</li>
-      <input type="url" />
-      <li>input type="week"</li>
-      <input type="week" />
-    </ul>
-    <p>Note: The default value of the type attribute is "text".</p>
-    <hr />
-    <h2>The &ltlabel&gt Element</h2>
-    <p>
-      The &ltlabel&gtcir; element is useful for screen-reader users, because the
-      screen-reader will read out loud the label when the user focus on the
-      input element.
-    </p>
-    <p>
-      The &ltlabel&gtrarr; element also help users who have difficulty clicking
-      on very small regions (such as radio buttons or checkboxes) - because when
-      the user clicks the text within the &ltlabel&gt element, it toggles the
-      radio button/checkbox.
-    </p>
-    <p>
-      The for attribute of the &ltlabel&gt tag should be equal to the id
-      attribute of the &ltinput&gt element to bind them together.
-    </p>
-    <hr />
-    <h2>The &ltselect&gt Element</h2>
-    <p>The &ltselect&gt element defines a drop-down list:</p>
-    <form action="/action_page.php">
-      <label for="cars">Choose a car:</label>
-      <select id="cars" name="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
-      </select>
-      <input type="submit" />
+   <p>All forms start with a <span class="highlightedCode">&ltform&gt</span> element, like this:</p>
+   <p><span class="highlightedCode">&ltform action="/my-handling-form-page" method="post"&gt…&lt/form&gt</span></p>
+<p>This element formally defines a form. It's a container element like a <span class="highlightedCode">&ltsection&gt</span> or <span class="highlightedCode">&ltfooter&gt</span> element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the <span class="highlightedCode">action</span> and <span class="highlightedCode">method</span> attributes:</p>
+    <p>The <span class="highlightedCode">action</span> attribute defines the location (URL) where the form's collected data should be sent when it is submitted.</p>
+    <p>The <span class="highlightedCode">method</span> attribute defines which HTTP method to send the data with (usually get or post).</p>
+    <img src="../images/completeFormExample.png" height="300px" alt="HTML code">
+    <hr>
+    <h2>The <span class="highlightedCode">&ltlabel&gt, &ltinput&gt,</span> and <span class="highlightedCode">&lttextarea&gt</span> elements</h2>
+    <form action="/my-handling-form-page" method="post">
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" /> - The input field for the name is a single-line text field.
+      </p>
+      <p>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="user_email" /> - The input field for the email is an input of type email: a single-line text field that accepts only email addresses.
+      </p>
+      <p>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea> - The input field for the message is a <span class="highlightedCode">&lttextarea&gt</span>; a multiline text field.
+      </p>
     </form>
-    <p>The &ltoption&gt element defines an option that can be selected.</p>
-    <p>By default, the first item in the drop-down list is selected.</p>
-    <p>
-      To define a pre-selected option, add the selected attribute to the option:
+    <p>The <span class="highlightedCode">&ltp&gt</span> elements are there to conveniently structure our code and make styling easier</p>
+    <img src="../images/inputTypeText.png" alt="HTML code">
+    <p>For usability and accessibility, we include an explicit label for each form control. Note the use of the <span class="highlightedCode">for</span> attribute on all <span class="highlightedCode">&ltlabel&gt</span> elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form control with its label.</p>
+    <hr>
+    <h2>The <span class="highlightedCode">&ltbutton&gt</span> element</h2>
+    <p>The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form. This is done by using the <span class="highlightedCode">&ltbutton&gt</span> element; add the following just above the closing <span class="highlightedCode">&lt/form&gt</span> tag:</p>
+    <img src="../images/buttonTypeSubmit.png" alt="HTML code">
+    <p class="button">
+      <button type="submit">Send your message</button>
     </p>
-    <p>&ltoption value="fiat" selected&gtFiat&lt/option&gt</p>
-    <h3>Visible Values</h3>
+    <p>The <span class="highlightedCode">&ltbutton&gt</span> element also accepts a type attribute — this accepts one of three values: <span class="highlightedCode">submit</span>, <span class="highlightedCode">reset</span>, or <span class="highlightedCode">button</span>.</p>
+    <ul>
+      <li>A click on a submit button (the default value) sends the form's data to the web page defined by the action attribute of the <span class="highlightedCode">&ltform&gt</span> element.</li>
+      <li>A click on a <span class="highlightedCode">reset</span> button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.</li>
+      <li>A click on a <span class="highlightedCode">button</span> button does nothing! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.</li>
+    </ul>
+    <hr>
+    <h2>Sending form data to your web server</h2>
+<p>The last part, and perhaps the trickiest, is to handle form data on the server side. The <span class="highlightedCode">&ltform&gt</span> element defines where and how to send the data thanks to the <span class="highlightedCode">action</span> and <span class="highlightedCode">method</span> attributes.</p>
+<p>We provide a <span class="highlightedCode">name</span> attribute for each form control. The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name. The form data is sent to the server as name/value pairs.</p>
+<p>To name the data in a form, you need to use the <span class="highlightedCode">name</span> attribute on each form widget that will collect a specific piece of data. Let's look at some of our form code again:</p>
+<img src="../images/completeFormExample.png" height="300px" alt="HTML code">
+<p>In our example, the form will send 3 pieces of data named <span class="highlightedCode">user_name</span>, <span class="highlightedCode">user_email</span>, and <span class="highlightedCode"user_message></span>. That data will be sent to the URL <span class="highlightedCode">/my-handling-form-page</span> using the HTTP POST method.</p>
+<p>On the server side, the script at the URL <span class="highlightedCode">/my-handling-form-page</span> will receive the data as a list of 3 key/value items contained in the HTTP request.</p>
+<hr>
+<h2>The <span class="highlightedCode">&ltfieldset&gt</span> and <span class="highlightedCode">&ltlegend&gt</span> elements</h2>
+<p>The <span class="highlightedCode">&ltfieldset&gt</span> element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a <span class="highlightedCode">&ltfieldset&gt</span> by including a <span class="highlightedCode">&ltlegend&gt</span> element just below the opening <span class="highlightedCode"&ltfieldset&gt></span> tag. The text content of the <span class="highlightedCode">&ltlegend&gt</span> formally describes the purpose of the <span class="highlightedCode">&ltfieldset&gt</span> it is included inside.</p>
+<p>Many assistive technologies will use the <span class="highlightedCode">&ltlegend&gt</span> element as if it is a part of the label of each control inside the corresponding <span class="highlightedCode">&ltfieldset&gt</span> element. For example, some screen readers such as Jaws and NVDA will speak the legend's content before speaking the label of each control.</p>
+<img src="../images/formFieldsetExample.png" height="300px" alt="">
+<form>
+  <fieldset>
+    <legend>Fruit juice size</legend>
+    <p>
+      <input type="radio" name="size" id="size_1" value="small" />
+      <label for="size_1">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_2" value="medium" />
+      <label for="size_2">Medium</label>
+    </p>
+    <p>
+      <input type="radio" name="size" id="size_3" value="large" />
+      <label for="size_3">Large</label>
+    </p>
+  </fieldset>
+</form>
+<p>When reading the above form, a screen reader will speak "Fruit juice size small" for the first widget, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.</p>
+<p>The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a <span class="highlightedCode">&ltfieldset&gt</span> element. There are other use cases, and in general the <span class="highlightedCode">>&ltfieldset&gt</span element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.</p>
+<p>Because of its influence over assistive technology, the <span class="highlightedCode">&ltfieldset&gt</span> element is one of the key elements for building accessible forms; however, it is your responsibility not to abuse it. If possible, each time you build a form, try to listen to how a screen reader interprets it. If it sounds odd, try to improve the form structure.</p>
+<hr>
+<h2>The <span class="highlightedCode">&ltlabel&gt</span> element</h2>
+<p>The <span class="highlightedCode">&ltlabel&gt</span> element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screen readers will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:</p>
 
-    <hr />
-  </body>
+<img src="../images/labelExampleOne.png" width="700px" alt="HTML code">
+<p>With the <span class="highlightedCode">&ltlabel&gt</span> associated correctly with the <span class="highlightedCode">&ltinput&gt</span> via its for attribute (which contains the <input> element's id attribute), a screen reader will read out something like "Name, edit text".</p>
+<p>There is another way to associate a form control with a label— nest the form control within the <span class="highlightedCode">&ltlabel&gt</span>, implicitly associating it.</p>
+<img src="../images/labelExampleTwo.png" height="65px" alt="">
+<p>Even in such cases however, it is considered best practice to set the <span class="highlightedCode">for</span> attribute to ensure all assistive technologies understand the relationship between label and widget.</p>
+<p>Another advantage of properly set up labels is that you can click or tap the label to activate the corresponding widget. This is useful for controls like text inputs, where you can click the label as well as the input to focus it, but it is especially useful for radio buttons and checkboxes — the hit area of such a control can be very small, so it is useful to make it as easy to activate as possible.</p>
+
+<!-- This is were i left -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form -->
+<div style="height: 300px";></div>
+
+
+   </body>
 </html>
