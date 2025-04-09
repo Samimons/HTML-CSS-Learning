@@ -5,11 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+      .olSpacedOut{
+        padding: 1em;
+      }
+      h1 {
+  margin-top: 0;
+}
+
+.noDots{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+form {
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+label span {
+  display: inline-block;
+  text-align: right;
+}
+
+input,
+fieldset {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+button {
+  margin: 20px 0 0 0;
+}
+
+label {
+  display: inline-block;
+}
+
+p label {
+  width: 100%;
+}
+
+    </style>
   </head>
   <body>
     <h1>Forms</h1>
     <a href="index.html">Index</a>
     <hr />
+
+
+    <!--  -->
     <p>
       An HTML form is used to collect user input. The user input is most often
       sent to a server for processing.
@@ -31,7 +92,20 @@
     <p>The <span class="highlightedCode">method</span> attribute defines which HTTP method to send the data with (usually get or post).</p>
     <img src="../images/completeFormExample.png" height="300px" alt="HTML code">
     <hr>
+
+
+    <!--  -->
     <h2>The <span class="highlightedCode">&ltlabel&gt, &ltinput&gt,</span> and <span class="highlightedCode">&lttextarea&gt</span> elements</h2>
+
+    <h3><span class="highlightedCode">&ltlabel&gt</span> and <span class="highlightedCode">&ltinput&gt</span></h3>
+    <img src="../images/inputTypeText.png" alt="HTML code">
+
+
+    <!--  -->
+<h3><span class="highlightedCode">&ltlabel&gt</span></h3>
+<img src="../images/textarea.png" alt="">
+
+
     <form action="/my-handling-form-page" method="post">
       <p>
         <label for="name">Name:</label>
@@ -46,10 +120,16 @@
         <textarea id="msg" name="user_message"></textarea> - The input field for the message is a <span class="highlightedCode">&lttextarea&gt</span>; a multiline text field.
       </p>
     </form>
+
+
+    <!--  -->
     <p>The <span class="highlightedCode">&ltp&gt</span> elements are there to conveniently structure our code and make styling easier</p>
-    <img src="../images/inputTypeText.png" alt="HTML code">
+    
     <p>For usability and accessibility, we include an explicit label for each form control. Note the use of the <span class="highlightedCode">for</span> attribute on all <span class="highlightedCode">&ltlabel&gt</span> elements, which takes as its value the id of the form control with which it is associated — this is how you associate a form control with its label.</p>
     <hr>
+
+
+    <!--  -->
     <h2>The <span class="highlightedCode">&ltbutton&gt</span> element</h2>
     <p>The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form. This is done by using the <span class="highlightedCode">&ltbutton&gt</span> element; add the following just above the closing <span class="highlightedCode">&lt/form&gt</span> tag:</p>
     <img src="../images/buttonTypeSubmit.png" alt="HTML code">
@@ -63,6 +143,9 @@
       <li>A click on a <span class="highlightedCode">button</span> button does nothing! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.</li>
     </ul>
     <hr>
+
+
+    <!--  -->
     <h2>Sending form data to your web server</h2>
 <p>The last part, and perhaps the trickiest, is to handle form data on the server side. The <span class="highlightedCode">&ltform&gt</span> element defines where and how to send the data thanks to the <span class="highlightedCode">action</span> and <span class="highlightedCode">method</span> attributes.</p>
 <p>We provide a <span class="highlightedCode">name</span> attribute for each form control. The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name. The form data is sent to the server as name/value pairs.</p>
@@ -71,10 +154,16 @@
 <p>In our example, the form will send 3 pieces of data named <span class="highlightedCode">user_name</span>, <span class="highlightedCode">user_email</span>, and <span class="highlightedCode"user_message></span>. That data will be sent to the URL <span class="highlightedCode">/my-handling-form-page</span> using the HTTP POST method.</p>
 <p>On the server side, the script at the URL <span class="highlightedCode">/my-handling-form-page</span> will receive the data as a list of 3 key/value items contained in the HTTP request.</p>
 <hr>
+
+
+<!--  -->
 <h2>The <span class="highlightedCode">&ltfieldset&gt</span> and <span class="highlightedCode">&ltlegend&gt</span> elements</h2>
 <p>The <span class="highlightedCode">&ltfieldset&gt</span> element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a <span class="highlightedCode">&ltfieldset&gt</span> by including a <span class="highlightedCode">&ltlegend&gt</span> element just below the opening <span class="highlightedCode"&ltfieldset&gt></span> tag. The text content of the <span class="highlightedCode">&ltlegend&gt</span> formally describes the purpose of the <span class="highlightedCode">&ltfieldset&gt</span> it is included inside.</p>
 <p>Many assistive technologies will use the <span class="highlightedCode">&ltlegend&gt</span> element as if it is a part of the label of each control inside the corresponding <span class="highlightedCode">&ltfieldset&gt</span> element. For example, some screen readers such as Jaws and NVDA will speak the legend's content before speaking the label of each control.</p>
 <img src="../images/formFieldsetExample.png" height="300px" alt="">
+
+
+<!--  -->
 <form>
   <fieldset>
     <legend>Fruit juice size</legend>
@@ -92,10 +181,16 @@
     </p>
   </fieldset>
 </form>
+
+
+<!--  -->
 <p>When reading the above form, a screen reader will speak "Fruit juice size small" for the first widget, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.</p>
 <p>The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a <span class="highlightedCode">&ltfieldset&gt</span> element. There are other use cases, and in general the <span class="highlightedCode">>&ltfieldset&gt</span element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.</p>
 <p>Because of its influence over assistive technology, the <span class="highlightedCode">&ltfieldset&gt</span> element is one of the key elements for building accessible forms; however, it is your responsibility not to abuse it. If possible, each time you build a form, try to listen to how a screen reader interprets it. If it sounds odd, try to improve the form structure.</p>
 <hr>
+
+
+<!--  -->
 <h2>The <span class="highlightedCode">&ltlabel&gt</span> element</h2>
 <p>The <span class="highlightedCode">&ltlabel&gt</span> element is the formal way to define a label for an HTML form widget. This is the most important element if you want to build accessible forms — when implemented properly, screen readers will speak a form element's label along with any related instructions, as well as it being useful for sighted users. Take this example, which we saw in the previous article:</p>
 
@@ -105,11 +200,320 @@
 <img src="../images/labelExampleTwo.png" height="65px" alt="">
 <p>Even in such cases however, it is considered best practice to set the <span class="highlightedCode">for</span> attribute to ensure all assistive technologies understand the relationship between label and widget.</p>
 <p>Another advantage of properly set up labels is that you can click or tap the label to activate the corresponding widget. This is useful for controls like text inputs, where you can click the label as well as the input to focus it, but it is especially useful for radio buttons and checkboxes — the hit area of such a control can be very small, so it is useful to make it as easy to activate as possible.</p>
+<hr>
 
-<!-- This is were i left -->
-<!-- https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form -->
+
+<!--  -->
+<h2>Common HTML structures used with forms</h2>
+<p>Beyond the structures specific to web forms, it's good to remember that form markup is just HTML. This means that you can use all the power of HTML to structure a web form.</p>
+<p>As you can see in the examples, it's common practice to wrap a label and its widget with a <span class="highlightedCode">&ltli&gt</span> element within a <span class="highlightedCode">&ltul&gt</span> or <span class="highlightedCode">&ltol&gt</span> list. <span class="highlightedCode">&ltp&gt</span> and <span class="highlightedCode">&ltdiv&gt</span> elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.</p>
+<p>In addition to the <span class="highlightedCode">&ltfieldset&gt</span> element, it's also common practice to use HTML titles (e.g., h1, h2) and sectioning (e.g., <span class="highlightedCode">&ltsection&gt</span>) to structure complex forms.</p>
+
+
+<!--  -->
+<form>
+  <h1>Payment form</h1>
+<p>
+  Required fields are followed by
+  <strong><span aria-label="required">*</span></strong>.
+</p>
+
+
+<!--  -->
+<section>
+  <h2>Contact information</h2>
+  <fieldset>
+    <legend>Title</legend>
+    <ul>
+      <li class="noDots">
+        <label for="title_1">
+          <input type="radio" id="title_1" name="title" value="A" />
+          Ace
+        </label>
+      </li>
+      <li class="noDots">
+        <label for="title_2">
+          <input type="radio" id="title_2" name="title" value="K" />
+          King
+        </label>
+      </li>
+      <li class="noDots">
+        <label for="title_3">
+          <input type="radio" id="title_3" name="title" value="Q" />
+          Queen
+        </label>
+      </li>
+    </ul>
+  </fieldset>
+  <p>
+    <label for="name">
+      <span>Name: </span>
+      <strong><span aria-label="required">*</span></strong>
+    </label>
+    <input type="text" id="name" name="username" required />
+  </p>
+  <p>
+    <label for="mail">
+      <span>Email: </span>
+      <strong><span aria-label="required">*</span></strong>
+    </label>
+    <input type="email" id="mail" name="user-mail" required />
+  </p>
+  <p>
+    <label for="pwd">
+      <span>Password: </span>
+      <strong><span aria-label="required">*</span></strong>
+    </label>
+    <input type="password" id="pwd" name="password" required />
+  </p>
+</section>
+
+
+<!--  -->
+<section>
+  <h2>Payment information</h2>
+  <p>
+    <label for="card">
+      <span>Card type:</span>
+    </label>
+    <select id="card" name="user-card">
+      <option value="visa">Visa</option>
+      <option value="mc">Mastercard</option>
+      <option value="amex">American Express</option>
+    </select>
+  </p>
+  <p>
+    <label for="number">
+      <span>Card number:</span>
+      <strong><span aria-label="required">*</span></strong>
+    </label>
+    <input type="tel" id="number" name="card-number" required />
+  </p>
+  <p>
+    <label for="expiration">
+      <span>Expiration date:</span>
+      <strong><span aria-label="required">*</span></strong>
+    </label>
+    <input
+      type="text"
+      id="expiration"
+      name="expiration"
+      required
+      placeholder="MM/YY"
+      pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+  </p>
+</section>
+
+
+<section>
+  <p>
+    <button type="submit">Validate the payment</button>
+  </p>
+</section>
+</form>
+
+
+<!--  -->
+<ol>
+  <li class="olSpacedOut">Next, create your form by adding a <span class="highlightedCode">&ltform&gt</span> element:</li>
+
+  <li class="olSpacedOut">Inside the <span class="highlightedCode">&ltform&gt</span> element, add a heading and paragraph to inform users how required fields are marked.</li>
+
+  <li class="olSpacedOut">Next, we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct <span class="highlightedCode">&ltsection&gt</span> element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list (<span class="highlightedCode">&ltli&gt</span>) element. We also have two standard text <span class="highlightedCode">&ltinput&gt</span>s and their associated <span class="highlightedCode">&ltlabel&gt</span> elements, each contained inside a <span class="highlightedCode">&ltp&gt</span>, and a password input for entering a password. Add this code to your form:</li>
+
+  <li class="olSpacedOut">The second <span class="highlightedCode">&ltsection&gt</span> of our form is the payment information. We have three distinct controls along with their labels, each contained inside a <span class="highlightedCode">&ltp&gt</span>. The first is a drop-down menu (<span class="highlightedCode">&ltselect&gt</span>) for selecting credit card type. The second is an <span class="highlightedCode">&ltinput&gt</span> element of type tel, for entering a credit card number; while we could have used the number type, we don't want the number's spinner UI. The last one is an <span class="highlightedCode">&ltinput&gt</span> element of type text, for entering the expiration date of the card; this includes a placeholder attribute indicating the correct format, and a pattern that tests that the entered date has the correct format. These newer input types are reintroduced in The HTML5 input types.</li>
+
+  <li class="olSpacedOut">The last section we'll add is a lot simpler, containing only a <span class="highlightedCode">&ltbutton&gt</span> of type submit, for submitting the form data. Add this to the bottom of your form now:</li>
+
+  <li class="olSpacedOut">Finally, complete your form by adding the outer <span class="highlightedCode">&ltform&gt</span> closing tag:</li>
+</ol>
+<hr>
+
+
+<!--  -->
+<h2>Common input types</h2>
+<ul>
+  <li>Text input fields</li>
+  <li>Password fields</li>
+  <li>Hidden content</li>
+  <li>Checkbox</li>
+  <li>Radio button</li>
+  <li>Actual buttons</li>
+  <li></li>
+  <li></li>
+</ul>
+
+
+<!--  -->
+<h3>Text input fields</h3>
+<p>All basic text controls share some common behaviors:</p>
+<p>They can be marked as <span class="highlightedCode">readonly</span> (the user cannot modify the input value but it is still sent with the rest of the form data) or <span class="highlightedCode">disabled</span> (the input value can't be modified and is never sent with the rest of the form data).</p>
+<p>They can have a <span class="highlightedCode">placeholder</span>; this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.</p>
+<p>They can be constrained in <span class="highlightedCode">size</span> (the physical size of the box) and <span class="highlightedCode">maxlength</span> (the maximum number of characters that can be entered into the box).</p>
+<p>They can benefit from spell-checking (using the <span class="highlightedCode">spellcheck</span> attribute).</p>
+<p>The <span class="highlightedCode">value</span> attriute places text inside text input box, but can be deleted.</p>
+<img src="../images/singleLineTextField.png" width="700" alt="">
+<label for="comment">Add a comment here:</label>
+          <input type="text" id="comment" name="comment" value="I'm a text field" maxlength="5">
+        </p>
+
+
+        <!--  -->
+<h3>Password field</h3>
+<img src="../images/passwordField.png" alt=""><br>
+<label for="pwd">Enter password:</label>
+<input type="password" id="pwd" name="pwd" />
+<p>The <span class="highlightedCode">password</span> value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g., with dots or asterisks) so it can't be easily read by others.</p>
+
+
+        <!--  -->
+<h3>Hidden content</h3>
+<p>Another original text control is the <span class="highlightedCode">hidden</span> input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.</p>
+<img src="../images/inputTypeHidden.png" width="700px" alt="">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
+<p>If you create such an element, it's required to set its name and value attributes. The value can be dynamically set via JavaScript. The hidden input type should not have an associated label.</p>
+
+
+<!--  -->
+<h3>Checkable items: checkboxes and radio buttons</h3>
+<p>Checkable items are controls whose state you can change by clicking on them or their associated labels. There are two kinds of checkable items: the checkbox and the radio button. Both use the checked attribute to indicate whether the widget is checked by default or not.</p>
+<p>It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a name attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of on.</p>
+
+<p>For maximum usability/accessibility, you are advised to surround each list of related items in a <span class="highlightedCode">&ltfieldset&gt</span>, with a <span class="highlightedCode">&ltlegend&gt</span> providing an overall description of the list. Each individual pair of <span class="highlightedCode">&ltlabel&gt/&ltinput&gt</span> elements should be contained in its own list item (or similar). The associated<span class="highlightedCode">&ltlabel&gt</span> is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the <span class="highlightedCode">&ltlegend&gt</span>.</p>
+
+
+<!--  -->
+<h3>Checkbox</h3>
+<p>A checkbox is created using the <span class="highlightedCode">&ltinput&gt</span> element with a type attribute set to the value checkbox.</p>
+<img src="../images/inputTypeCheckbox.png" height="25px" alt="HTML code"><br>
+<input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
+<p>Related checkbox items should use the same <span class="highlightedCode">name</span> attribute. Including the <span class="highlightedCode">checked</span> attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.</p>
+<img src="../images/completeCheckboxExample.png" width="800px" alt="">
+<fieldset>
+  <legend>Choose all the vegetables you like to eat</legend>
+  <ul>
+    <li>
+      <label for="carrots">Carrots</label>
+      <input
+        type="checkbox"
+        id="carrots"
+        name="vegetable"
+        value="carrots"
+        checked/>
+    </li>
+    <li>
+      <label for="peas">Peas</label>
+      <input type="checkbox" id="peas" name="vegetable" value="peas" />
+    </li>
+    <li>
+      <label for="cabbage">Cabbage</label>
+      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage" />
+    </li>
+  </ul>
+
+
+  <!--  -->
+</fieldset>
+<h3>Radio button</h3>
+<p>A radio button is created using the <span class="highlightedCode">&ltinput&gt</span> element with its type attribute set to the value radio:</p>
+<img src="../images/inputTypeRadio.png" height="25px" alt="HTML code"><br>
+<input type="radio" id="soup" name="meal" value="soup" checked />
+<p>Several radio buttons can be tied together. If they share the same value for their <span class="highlightedCode">name</span> attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all the buttons without resetting the form.</p>
+<img src="../images/completeButtonExample.png" height="425px" alt="">
+<fieldset>
+  <legend>What is your favorite meal?</legend>
+  <ul>
+    <li>
+      <label for="soup">Soup</label>
+      <input type="radio" id="soup" name="meal" value="soup" checked />
+    </li>
+    <li>
+      <label for="curry">Curry</label>
+      <input type="radio" id="curry" name="meal" value="curry" />
+    </li>
+    <li>
+      <label for="pizza">Pizza</label>
+      <input type="radio" id="pizza" name="meal" value="pizza" />
+    </li>
+  </ul>
+</fieldset>
+
+
+<!--  -->
+<h3>Actual buttons</h3>
+<p>There are three input types that produce buttons:</p>
+<p><span class="highlightedCode">submit</span> - Sends the form data to the server. For<span class="highlightedCode">&ltbutton&gt</span> elements, omitting the type attribute (or an invalid value of type) results in a submit button.
+</p>
+<p><span class="highlightedCode">reset</span> - Resets all form widgets to their default values.</p>
+<p><span class="highlightedCode">button</span> - Buttons that have no automatic effect but can be customized using JavaScript code.</p>
+<p>Then we also have the <span class="highlightedCode">&ltbutton&gt</span> element itself. This can take a type attribute of value submit, reset, or button to mimic the behavior of the three <span class="highlightedCode">&ltinput&gt</span> types mentioned above. The main difference between the two is that actual <span class="highlightedCode">&ltbutton&gt</span> elements are much easier to style.</p>
+<p>Below you can find examples of each button <span class="highlightedCode">&ltinput&gt</span> type, along with the equivalent<span class="highlightedCode">&ltbutton&gt</span>type.</p>
+
+
+<!--  -->
+<h4>submit</h4>
+<img src="../images/buttonTypeSubmit2.png" height="50px" alt="HTML code">
+<button type="submit">This is a <strong>submit button</strong></button>
+<input type="submit" value="This is a submit button" />
+
+
+<!--  -->
+<h4>reset</h4>
+<img src="../images/typeReset.png" height="50px" alt="HTML code">
+<button type="reset">This is a <strong>reset button</strong></button>
+<input type="reset" value="This is a reset button" />
+
+
+<!--  -->
+<h4>anonymous</h4>
+<img src="../images/typeButton.png" height="50px" alt="">
+<button type="button">This is an <strong>anonymous button</strong></button>
+<input type="button" value="This is an anonymous button" />
+
+
+
+<!--  -->
+<p>Buttons always behave the same whether you use a <span class="highlightedCode">&ltbutton&gt</span> element or an <span class="highlightedCode">&ltinput&gt</span> element. As you can see from the examples, however, <span class="highlightedCode">&ltbutton&gt</span> elements let you use HTML in their content, which is inserted between the opening and closing <span class="highlightedCode">&ltbutton&gt</span> tags. <span class="highlightedCode">&ltinput&gt</span> elements on the other hand are void elements; their displayed content is inserted inside the value attribute, and therefore only accepts plain text as content.</p>
+
+
+<!--  -->
+<h3>Image button</h3>
+
+<p>The image button control is rendered exactly like an <span class="highlightedCode">&ltimg&gt</span> element, except that when the user clicks on it, it behaves like a submit button.</p>
+
+<p>An image button is created using an <span class="highlightedCode">&ltinput&gt</span> element with its <span class="highlightedCode">type</span> attribute set to the value image. This element supports exactly the same set of attributes as the <span class="highlightedCode">&ltimg&gt</span> element, plus all the attributes supported by other form buttons.</p>
+
+<input type="image" alt="Click me!" src="../images/black puppy.jpg" width="75" height="150" />
+
+<p>If the image button is used to submit the form, this control doesn't submit its value — instead, the X and Y coordinates of the click on the image are submitted (the coordinates are relative to the image, meaning that the upper-left corner of the image represents the coordinate (0, 0)). The coordinates are sent as two key/value pairs:</p>
+
+<ul>
+  <li>The X value key is the value of the <span class="highlightedCode">name</span> attribute followed by the string ".x".</li>
+  <li>The Y value key is the value of the <span class="highlightedCode">name</span> attribute followed by the string ".y".</li>
+</ul>
+
+<p>So for example when you click on the image at coordinate (123, 456) and it submits via the get method, you'll see the values appended to the URL as follows:</p>
+
+<p>http://foo.com?pos.x=123&pos.y=456
+</p>
+
+<p>This is a very convenient way to build a "hot map".</p>
+
+
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#actual_buttons
+
+
+
+
+
+
 <div style="height: 300px";></div>
-
-
    </body>
 </html>
+ <p>
+ 
