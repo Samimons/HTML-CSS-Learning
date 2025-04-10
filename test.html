@@ -16,35 +16,44 @@
       </head>
     
     <body>
-        <form>
-            <p>
-              <label for="comment">Add a comment here:</label>
-              <input type="text" id="comment" name="comment" value="I'm a text field">
-            </p>
-            <p>
-              <label for="email">Enter your email address:</label>
-              <input type="email" id="email" name="email" multiple>
-            </p>
-            <p>
-              <label for="pwd">Enter your password:</label>
-              <input type="password" id="pwd" name="pwd">
-            </p>
-            <p>
-              <label for="search">Search:</label>
-              <input type="search" id="search" name="search">
-            </p>
-            <p>
-              <label for="tel">Enter your number:</label>
-              <input type="tel" id="tel" name="tel">
-            </p>
-            <p>
-              <label for="url">Web address:</label>
-              <input type="url" id="url" name="url">
-            </p>
-            <p>
-              <button type="submit">Submit me!</button>
-            </p>
-        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+     <h1>Your Course Landing Page</h1>
+
+     <form action="/clp">
+     <section>
+     <label for="title">Course Title</label>
+     <input type="text" name="courseTitle" id="title" required>
+     
+<br>
+     <label for="description">Course Description</label><br>
+     <textarea name="courseDesription" id="description" cols="25" rows="10"></textarea>
+<br>
+<label for="level">Skill Level</label>
+     <select name="skillLevel" id="level">
+      <option value="beginner">Beginner Level</option>
+      <option value="intermediate">Intermediate Level</option>
+      <option value="expert">Expert Level</option>
+      <option value="all">All Levels</option>
+</select>
+<br>
+<label for="ready">Ready to publish course?</label>
+<input type="checkbox" name="readyToPublish" id="ready">
+<br>
+<button>Submit</button>
+
+    </section>
+  </form>
     </body>
     
     </html>
