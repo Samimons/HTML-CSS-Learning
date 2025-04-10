@@ -339,8 +339,9 @@ p label {
   <li>Checkbox</li>
   <li>Radio button</li>
   <li>Actual buttons</li>
-  <li></li>
-  <li></li>
+  <li>Image button</li>
+  <li>File picker</li>
+  <li>Common attributes</li>
 </ul>
 
 
@@ -500,17 +501,33 @@ p label {
 <p>This is a very convenient way to build a "hot map".</p>
 
 
+<!--  -->
+<h3>File Picker</h3>
+<p>There is one last <span class="highlightedCode">&ltinput&gt</span> type that came to us in early HTML: the file input type. Forms are able to send files to a server. The file picker widget can be used to choose one or more files to send.</p>
+
+<p>To create a <span class="highlightedCode">file picker widget</span>, you use the <span class="highlightedCode">&ltinput&gt</span> element with its <span class="highlightedCode">type</span> attribute set to file. The types of files that are accepted can be constrained using the <span class="highlightedCode">accept</span> attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the <span class="highlightedCode">multiple</span> attribute.</p>
+
+<p>In this example, a file picker is created that requests graphic image files. The user is allowed to select multiple files in this case.</p>
+
+<img src="../images/fileImage.png" height="25" alt="HTML code">
+<input type="file" name="file" id="file" accept="image/*" multiple />
+
+<p>On some mobile devices, the file picker can access photos, videos, and audio captured directly by the device's camera and microphone by adding capture information to the <span class="highlightedCode">accept</span> attribute like so:</p>
+
+<img src="../images/fileAccept.png" height="75" alt="HTML code">
+
+<input type="file" accept="image/*;capture=camera" /><br>
+<input type="file" accept="video/*;capture=camcorder" /><br>
+<input type="file" accept="audio/*;capture=microphone" />
+
 
 <!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#actual_buttons
+<h3>Common Attributes</h3>
+<p>Many of the elements used to define form controls have some of their own specific attributes. However, there is a set of attributes common to all form elements.</p>
 
+<p><span class="highlightedCode">autofocus</span> - This Boolean attribute lets you specify that the element should automatically have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.</p>
 
-
-
-
+<p><span class="highlightedCode">disabled</span> - This Boolean attribute indicates that the user cannot interact with the element. If this attribute is not specified, the element inherits its setting from the containing element, for example, <span class="highlightedCode">&ltfieldset&gt</span>; if there is no containing element with the disabled attribute set, then the element is enabled.</p>
 
 <div style="height: 300px";></div>
    </body>
