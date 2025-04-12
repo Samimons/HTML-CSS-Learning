@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling Text</title>
+   <style>
+ 
+   </style>
+  </head>
+  <body>
+    <h1>Styling Text</h1>
+    <a href="index.html">Index</a>
+    <ul>
+        <li>font-family</li>
+        <li>font-size</li>
+        <li>font-weight</li>
+        <li>font-style</li>
+        <li>text-align</li>
+        <li>letter-spacing & word-spacing</li>
+        <li>line-height</li>
+        <li>custom fonts</li>
+    </ul>
+    <hr />
+
+
+
+    <!-- Font Family -->
+    <h2>font-family</h2>
+    <p>
+      The font-family CSS property specifies a prioritized list of one or more
+      font family names and/or generic family names for the selected element.
+    </p>
+    <p>
+      The browser starts at the beginning of the list and looks to see if that
+      font is available on the machine. If it is, it applies that font to the
+      selected elements. If not, it moves on to the next font, and so on.
+    </p>
+
+    <img src="../images/fontFamily.png" height="25" alt="CSS code" />
+
+    <p>
+      It is a good idea to provide a suitable generic font name at the end of
+      the stack so that if none of the listed fonts are available, the browser
+      can at least provide something approximately suitable. To emphasize this
+      point, paragraphs are given the browser's default serif font if no other
+      option is available — which is usually Times New Roman — this is no good
+      for a sans-serif font!
+    </p>
+
+    <ul>
+        <li>serif - Fonts that have serifs (the flourishes and other small details you see at the ends of the strokes in some typefaces).</li>
+        <li>sans-serif - Fonts that don't have serifs.</li>
+        <li>monospace - Fonts where every character has the same width, typically used in code listings.</li>
+        <li>cursive	- Fonts that are intended to emulate handwriting, with flowing, connected strokes.</li>
+        <li>fantasy	- Fonts that are intended to be decorative.</li>
+        <li>math - This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.</li>
+        <li>emoji - Fonts that are specifically designed to render emoji.</li>
+        <li>fangsong - A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.</li>
+    </ul>
+<hr>
+
+
+
+<!-- Font Size -->
+<h2>font-size</h2>
+<p>The font-size CSS property sets the size of the font. Changing the font size also updates the sizes of the font size-relative <length> units, such as em, ex, and so forth.</p>
+<img src="../images/fontSize.png" height="700" alt="CSS code">
+<hr>
+
+
+
+<!-- Font Weights -->
+<h2>font-weight</h2>
+<p>The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family that is currently set.</p>
+<img src="../images/font-weight.png" height="600" alt="CSS code">
+
+<h3>Common weight name mapping</h3>
+<p>The numerical values 100 to 900 roughly correspond to the following common weight names.</p>
+<img src="../images/commonWeightNameMapping.png" height="400" alt="CSS code">
+<hr>
+
+
+
+<!-- Font Style -->
+<h2>font-style</h2>
+<p>The font-style CSS property sets whether a font should be styled with a normal, italic, or oblique face from its font-family.</p>
+<img src="../images/fontStyle.png" height="300" alt="CSS code">
+<p>normal
+Selects a font that is classified as normal within a font-family.</p>
+<p>italic
+Selects a font that is classified as italic. If no italic version of the face is available, one classified as oblique is used instead. If neither is available, the style is artificially simulated.</p>
+<p>oblique
+Selects a font that is classified as oblique. If no oblique version of the face is available, one classified as italic is used instead. If neither is available, the style is artificially simulated.</p>
+<p>oblique <angle>
+Selects a font classified as oblique, and additionally specifies an angle for the slant of the text. If one or more oblique faces are available in the chosen font family, the one that most closely matches the specified angle is chosen. If no oblique faces are available, the browser will synthesize an oblique version of the font by slanting a normal face by the specified amount. Valid values are degree values of -90deg to 90deg inclusive. If an angle is not specified, an angle of 14 degrees is used. Positive values are slanted to the end of the line, while negative values are slanted towards the beginning.</p>
+<p></p>
+<hr>
+
+
+
+<!-- Text Align -->
+<h2>text-align</h2>
+<p>The text-align CSS property sets the horizontal alignment of the inline-level content inside a block element or table-cell box.</p>
+<img src="../images/textAlign.png" height="500" alt="CSS code">
+<hr>
+
+
+
+<!-- Letter Spacing, Word Spacing -->
+<h2>letter-spacing & word-spacing</h2>
+<p>The letter-spacing CSS property sets the horizontal spacing behavior between text characters. This value is added to the natural spacing between characters while rendering the text. Positive values of letter-spacing causes characters to spread farther apart, while negative values of letter-spacing bring characters closer together.</p>
+<img src="../images/letterSpacing.png" height="300" alt="CSS code">
+<img src="../images/wordSpacing.png" height="300" alt="CSS code">
+<hr>
+
+
+
+<!-- Line Height -->
+<h2>line-height</h2>
+<p>The line-height CSS property sets the height of a line box in horizontal writing modes. In vertical writing modes, it sets the width of a line box. It's commonly used to set the distance between lines of text. On block-level elements in horizontal writing modes, it specifies the preferred height of line boxes within the element, and on non-replaced inline elements, it specifies the height that is used to calculate line box height.</p>
+<img src="../images/lineHeight.png" height="450" alt="CSS code">
+<p>normal - 
+Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly 1.2, depending on the element's font-family.</p>
+<p>number -  (unitless)
+The used value is this unitless number multiplied by the element's own font size. The computed value is the same as the specified number. In most cases, this is the preferred way to set line-height and avoid unexpected results due to inheritance.</p>
+<p>length - 
+The specified length is used in the calculation of the line box height. Values given in em units may produce unexpected results (see example below).</p>
+<p>percentage - 
+Relative to the font size of the element itself. The computed value is this percentage multiplied by the element's computed font size. Percentage values may produce unexpected results.</p>
+<hr>
+
+
+
+<!-- Custom Fonts -->
+<h2>custom fonts</h2>
+<p>Take me to <a href="https://fonts.google.com/">Google Fonts</a></p>
+<ol>
+    <li>Select font.</li>
+    <li>Click "Get font, top right"</li>
+    <li>Click "Get embedded code"</li>
+    <li>Copy embedded code and put in head of html.</li>
+</ol>
+<p>Which will look something like this:
+</p>
+<img src="../images/googleFonts.png" height="80" alt="">
+</body>
+</html>
