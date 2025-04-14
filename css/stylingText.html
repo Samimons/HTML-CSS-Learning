@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Styling Text</title>
    <style>
+ .container {
+   display: flex;
+   padding-top: 2em;
+   gap: 0.625%;
+ }
  
+ .lab {
+   flex: 1;
+   text-decoration: none;
+   outline-color: transparent;
+   text-align: center;
+   line-height: 3;
+   color: black;
+ }
+ 
+ .lab:link,
+ .lab:visited,
+ .lab:focus {
+   background: palegoldenrod;
+   color: black;
+ }
+ 
+ .lab:hover {
+   background: orange;
+ }
+ 
+ .lab:active {
+   background: darkred;
+   color: white;
+ }
    </style>
   </head>
   <body>
@@ -20,6 +49,22 @@
         <li>letter-spacing & word-spacing</li>
         <li>line-height</li>
         <li>custom fonts</li>
+        <li>text-shadow</li>
+        <li>text-transform</li>
+        <li>text-decoration</li><ul>
+          <li>text-decoration-line</li>
+          <li>text-decoration-color</li>
+          <li>text-decoration-style</li>
+          <li>text-decoration-thickness</li>
+        </ul>
+        <li>list-style</li><ul>
+          <li>list-style-image</li>
+          <li>list-style-position</li>
+          <li>list-style-type</li>
+        </ul>
+        <li>styling-links</li>
+        <li>styling links as buttons</li>
+        <li></li>
     </ul>
     <hr />
 
@@ -144,5 +189,149 @@ Relative to the font size of the element itself. The computed value is this perc
 <p>Which will look something like this:
 </p>
 <img src="../images/googleFonts.png" height="80" alt="">
+<hr>
+
+
+
+<!-- Text Shadow -->
+ <h2>text-shadow</h2>
+<p>The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations. Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.</p>
+<img src="../images/textShadow.png" height="500" alt="CSS code">
+<h3>Values</h3>
+<p>offset-x offset-y
+Required. These length values specify the shadow's distance from the text. offset-x specifies the horizontal distance; a negative value places the shadow to the left of the text. offset-y specifies the vertical distance; a negative value places the shadow above the text. If both values are 0, the shadow is placed directly behind the text, although it may be partly visible due to the effect of blur-radius.</p>
+<p>blur-radius
+Optional. This is a length value. The higher the value, the bigger the blur; the shadow becomes wider and lighter. If not specified, it defaults to 0.</p>
+<p>color
+Optional. The color of the shadow. It can be specified either before or after the offset values. If unspecified, the color's value is left up to the user agent, so when consistency across browsers is desired you should define it explicitly.</p>
+<hr>
+
+
+
+
+<!-- Text Transform -->
+<h2>text-transform</h2>
+<p>The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.</p>
+<img src="../images/textTransform .png" height="350" alt="CSS code">
+<p>uppercase
+Is a keyword that converts all characters to uppercase.</p>
+<p>lowercase
+Is a keyword that converts all characters to lowercase.</p>
+<p>none
+Is a keyword that prevents the case of all characters from being changed.</p>
+<p>full-width
+Is a keyword that forces the writing of a character — mainly ideograms and Latin scripts — inside a square, allowing them to be aligned in the usual East Asian scripts (like Chinese or Japanese).</p>
+<p>full-size-kana
+Generally used for ruby annotation text, the keyword converts all small Kana characters to the equivalent full-size Kana, to compensate for legibility issues at the small font sizes typically used in ruby.</p>
+<p>math-auto
+Used to automatically render text in math italic where appropriate. It transforms Latin and Greek letters, and a few other math-related symbols, to italic mathematical symbols but only if it's applied on a text node containing a single character. For example, "x" will become "𝑥" (U+1D465), but "exp" will stay as "exp". It is primarily used to specify the behavior of mi elements in MathML. You should generally use MathML markup which automatically applies the right styling.</p>
+<hr>
+
+
+
+<!-- Text Decoration -->
+<h2>text-decoration</h2>
+<p>The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.</p>
+<img src="../images/textDecoration.png" height="400" alt="CSS code">
+<p>text-decoration-thickness: 10px;</p>
+<p>text-decoration-line
+Sets the kind of decoration used, such as underline or line-through.</p>
+<p>text-decoration-color
+Sets the color of the decoration.</p>
+<p>text-decoration-style
+Sets the style of the line used for the decoration, such as solid, wavy, or dashed.</p>
+<p>text-decoration-thickness
+Sets the thickness of the line used for the decoration.</p>
+<hr>
+
+
+
+<!-- List Style -->
+ <h2>list-style</h2>
+ <p>The list-style CSS shorthand property allows you to set all the list style properties at once.</p>
+<p>The values of this property are applied to list items, including li elements and elements with display: list-item;. Because this property is inherited, it can be set on a parent element (normally ol or ul) to make the same list styling apply to all the nested items.</p>
+
+<img src="../images/listStyles.png" height="500" alt="CSS code">
+
+<p>list-style-type
+A counter-style, string, or none. If omitted in the shorthand, the default disc value is used. See list-style-type.</p>
+<p>list-style-image
+An image or none. If omitted, the default none value is used. See list-style-image.</p>
+<p>list-style-position
+Either inside or outside. If omitted, the default outside value is used. See list-style-position.</p>
+<p>none
+No list style is used.</p>
+<hr>
+
+
+
+<!-- Styling Links -->
+<h2>styling-links</h2>
+<p>When styling links, it is important to understand why default link styles are important, how to use pseudo-classes to style link states effectively, and how to style links for use in common varied interface features such as navigation menus and tabs.</p>
+<h3>Link states</h3>
+
+<p>link: A link that has a destination (i.e., not just a named anchor), styled using the :link pseudo class.</p>
+<p>visited: A link that has already been visited (exists in the browser's history), styled using the :visited pseudo class.</p>
+<p>hover: A link that is hovered over by a user's mouse pointer, styled using the :hover pseudo class.</p>
+<p>focus: A link that is focused (e.g., moved to by a keyboard user using the Tab key or something similar, or programmatically focused using HTMLElement.focus()) %E2%80%94 this is styled using the :focus pseudo class.</p>
+<p>active: A link that is activated (e.g., clicked on), styled using the :active pseudo class.</p>
+
+<h3>Default styles</h3>
+<ul>
+  <li>Links are underlined.</li>
+  <li>Unvisited links are blue.</li>
+  <li>Visited links are purple.</li>
+  <li>Hovering a link makes the mouse pointer change to a little hand icon.</li>
+  <li>Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key.</li>
+  <li>Active links are red. Try holding down the mouse button on the link as you click it.</li>
+</ul>
+<hr>
+
+
+
+<!-- Styling links as buttons -->
+<h2>Styling links as buttons</h2>
+<p>In addition, links are quite commonly styled to look and behave like buttons in certain circumstances. A website navigation menu can be marked up as a set of links, and this can be styled to look like a set of control buttons or tabs that provide the user with access to other parts of the site.</p>
+<p>HTML</p>
+<img src="../images/stylingLinksHTML.png" height="150" alt="HTML code">
+
+
+<p>CSS</p>
+<img src="../images/stylingLinks.png" height="500" alt="">
+
+
+<nav class="container">
+  <a class="lab" href="lab">Home</a>
+  <a class="lab" href="lab">Pizza</a>
+  <a class="lab" href="lab">Music</a>
+  <a class="lab" href="lab">Wombats</a>
+  <a class="lab" href="lab">Finland</a>
+</nav>
+
+<p>The HTML defines a nav element with a "container" class. The nav contains our links.</p>
+<p>The CSS includes the styling for the container and the links it contains.</p>
+<ul>
+  <li>The second rule says:</li><ul>
+    <li>The container is a flexbox. The items it contains — the links, in this case — will be flex items.</li>
+    <li>The gap between the flex items will be 0.625% of the container's width.</li>
+  </ul>
+  <li>The third rule styles the links:</li><ul>
+    <li>The first declaration, flex: 1, means that the widths of the items will be adjusted so they use all the available space in the container.</li>
+    <li>Next, we turn off the default text-decoration and outline — we don't want those spoiling our look.</li>
+    <li>The last three declarations are to center the text inside each link, set the line-height to 3 to give the buttons some height (which also has the advantage of centering the text vertically), and set the text color to black.</li>
+  </ul>
+</ul>
+<hr>
+
+
+
+
+<!-- Cursor -->
+ <h2>cursor</h2>
+ <p>The cursor CSS property sets the mouse cursor, if any, to show when the mouse pointer is over an element.</p>
+ <p>The cursor setting should inform users of the mouse operations that can be performed at the current location, including: text selection, activating help or context menus, copying content, resizing tables, and so on. You can specify either the type of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).</p>
+
+ <p>A link to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor"</a>mdn cursor</p>
+<hr>
 </body>
 </html>

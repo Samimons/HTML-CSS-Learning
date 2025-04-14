@@ -4,58 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+  <style>
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+  text-align: center;
+  font-weight: 100;
+  font-size: 40px;
+}
+p{
+  font-size: 24px;
+}
+#leafy{
+  color: #1d6e09;
+  text-decoration: underline;
+  text-decoration-color: #c5d5c1;
+}
+.latin{
+  font-style: italic;
+}
+h2{
+  text-transform: uppercase;
+}
+a:link{
+  text-decoration: none;
+  color: coral;
+}
+a:hover{
+  text-decoration: underline; color: brown;
+}
+li{
+  list-style: square;
+}
+  </style>
   </head>
   <body>
+   <h1><span id="leafy">Leafy</span> seadragon</h1>
    
-    <!DOCTYPE html>
-    <html lang="en-US">
-      <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Single line text field examples</title>
-      </head>
-    
-    <body>
-
-
-
-
-
-
-
-
-
-
-
-
-     <h1>Your Course Landing Page</h1>
-
-     <form action="/clp">
-     <section>
-     <label for="title">Course Title</label>
-     <input type="text" name="courseTitle" id="title" required>
+   <p>The leafy seadragon <span class="latin">(Phycodurus eques)</span> is the only member of the genus <span class="latin">Phycodurus</span> and is a marine fish in the family <span class="latin">Syngnathidae</span>, which includes seadragons, pipefish, and seahorses.[2]</p>
+   
+   <h2>Description</h2>
+   <p>Much like the <a href="https://en.wikipedia.org/wiki/Seahorse">seahorse</a>, the leafy seadragon's name is derived from its resemblance to another creature (in this case, the mythical dragon). While not large, they are slightly larger than most seahorses, growing to about 20–24 cm (8–9.5 in). They feed on <a href="https://en.wikipedia.org/wiki/Plankton">plankton</a> and small <a href="https://en.wikipedia.org/wiki/Crustacean">crustaceans</a>.</p>
+   
+   <h2>See Also</h2>
+   <ul>
+     <li>Seahorse</li>
+     <li>Pipefish</li>
+     <li>Ruby Seadragon</li>
      
-<br>
-     <label for="description">Course Description</label><br>
-     <textarea name="courseDesription" id="description" cols="25" rows="10"></textarea>
-<br>
-<label for="level">Skill Level</label>
-     <select name="skillLevel" id="level">
-      <option value="beginner">Beginner Level</option>
-      <option value="intermediate">Intermediate Level</option>
-      <option value="expert">Expert Level</option>
-      <option value="all">All Levels</option>
-</select>
-<br>
-<label for="ready">Ready to publish course?</label>
-<input type="checkbox" name="readyToPublish" id="ready">
-<br>
-<button>Submit</button>
-
-    </section>
-  </form>
-    </body>
-    
-    </html>
+   </ul>
+ 
   </body>
 </html>
