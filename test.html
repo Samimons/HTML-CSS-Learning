@@ -5,55 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   <style>
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-h1{
-  text-align: center;
-  font-weight: 100;
-  font-size: 40px;
-}
-p{
-  font-size: 24px;
-}
-#leafy{
-  color: #1d6e09;
-  text-decoration: underline;
-  text-decoration-color: #c5d5c1;
-}
-.latin{
-  font-style: italic;
-}
-h2{
-  text-transform: uppercase;
-}
-a:link{
-  text-decoration: none;
-  color: coral;
-}
-a:hover{
-  text-decoration: underline; color: brown;
-}
 li{
-  list-style: square;
+  color: purple;
 }
+h1, h2{
+  color: blue;
+}
+button#submit{
+  background-color: green;
+}
+#flavors span{
+  color: red  ;
+}
+li.size{
+  color: magenta;
+}
+input[type="email"]{
+  background-color: orange;
+}
+a[href$=".org"]{
+  color: magenta;
+}
+h2.bright{
+  color: cyan;
+}
+
+
   </style>
-  </head>
-  <body>
-   <h1><span id="leafy">Leafy</span> seadragon</h1>
-   
-   <p>The leafy seadragon <span class="latin">(Phycodurus eques)</span> is the only member of the genus <span class="latin">Phycodurus</span> and is a marine fish in the family <span class="latin">Syngnathidae</span>, which includes seadragons, pipefish, and seahorses.[2]</p>
-   
-   <h2>Description</h2>
-   <p>Much like the <a href="https://en.wikipedia.org/wiki/Seahorse">seahorse</a>, the leafy seadragon's name is derived from its resemblance to another creature (in this case, the mythical dragon). While not large, they are slightly larger than most seahorses, growing to about 20–24 cm (8–9.5 in). They feed on <a href="https://en.wikipedia.org/wiki/Plankton">plankton</a> and small <a href="https://en.wikipedia.org/wiki/Crustacean">crustaceans</a>.</p>
-   
-   <h2>See Also</h2>
-   <ul>
-     <li>Seahorse</li>
-     <li>Pipefish</li>
-     <li>Ruby Seadragon</li>
-     
-   </ul>
+<body>
+  
+
+ <h1 class="bright">Maggy's Ice Cream Shop</h1>
  
+ <h2 class="bright">Flavors</h2>
+ 
+ <ul id="flavors">
+   <li>Chocolate - <span>$2</span></li>
+   <li>Vanilla <span>$2</span></li>
+   <li>Mint Chocolate Chip <span>$2</span></li>
+   <li>Honey Lavender <span>$2</span></li>
+ </ul>
+ 
+ <h2>Sizes</h2>
+ 
+ <ul>
+   <li class="size">Small</li>
+   <li class="size">Medium</li>
+   <li class="size">Large</li>
+   <li class="size">Family Size</li>
+   <li>Some other LI </li>
+ </ul>
+ 
+ <ul class="socials">
+   <li><a href="http://www.facebook.com">Facebook</a>
+   <li><a href="http://developer.mozilla.org">MDN</a></li>
+   <li><a href="http://www.twitter.com">Twitter</a></li>
+   <li><a href="http://www.instagram.com">Instagram</a></li>
+   <li><a href="http://www.wikipedia.org">Wikipedia</a></li>
+ </ul>
+ 
+ <form action="">
+   <input type="text">
+   <input type="email">
+   <button>Another button</button>
+   <button id="submit">Submit</button>
+ </form>
   </body>
 </html>
