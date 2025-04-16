@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+
+
+        
+        .box{
+            width: 80%;
+            min-width: 300px;
+            max-width: 500px;
+            height: 150px;
+            background-color: rgb(51, 35, 190);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The Box Model</h1>
+    <a href="index.html">Index</a>
+    <ul>
+        <li>Border</li><ul>
+            <li>Border width, height & percentage</li>
+            <li>Border style</li>
+        </ul>
+        <li>Padding</li>
+        <li>Margin</li>
+        <li>Standard box model</li>
+        <li>Alternative box model</li>
+        <li>Display property</li><ul>
+            <li>Block</li>
+            <li>Inline</li>
+            <li>Inline-block</li>
+            <li>Display-none</li>
+        </ul>
+        <li>Min & Max width</li>
+        <li>Border radius</li>
+        <li>Box shadow</li>
+        <li>Overflow</li>
+       
+    </ul>
+    <hr>
+
+    <!-- Border *******************************************-->
+    <h2>Border</h2>
+<img src="../images/borderLonghand.png" height="80" alt="CSS code">
+<p>The border shorthand CSS property sets an element's border. It sets the values of border-width, border-style, and border-color.</p>
+<img src="../images/borderShorthand.png" height="50" alt="">
+<hr>
+
+
+
+<h3>Border width, height & percentage</h3>
+<img src="../images/borderWHP.png" height="80" alt="CSS code">
+<p>p - absolute</p>
+<p>% - relative</p>
+<hr>
+    <h3>Border style</h3>
+    <ul>
+    <li>border-style: none;</li>
+<li>border-style: hidden;</li>
+<li>border-style: dotted;</li>
+<li>border-style: dashed;</li>
+<li>border-style: solid;</li>
+<li>border-style: double;</li>
+<li>border-style: groove;</li>
+<li>border-style: ridge;</li>
+<li>border-style: inset;</li>
+<li>border-style: outset;</li>
+</ul>
+<hr>
+
+
+<!-- Padding **********************************************-->
+<h2>Padding</h2>
+<ul>
+    <li>padding-top: 10px;</li>
+    <li>padding-right: 10px;</li>
+    <li>padding-bottom: 10px;</li>
+    <li>padding-left: 10px;</li>
+    <br>
+    <li>padding: 20px; - all sides</li>
+    <li>padding: 5px 10px 15px 20px;</li>
+    <li>padding: 10px 20px; - top & bottom | left & right</li>
+    <li>padding 10px 20px 10px; - top | left & right | bottom</li>
+    <li></li>
+
+</ul>
+<hr>
+
+<!-- Margin ************************************************-->
+<h2>Margin</h2>
+<p>Same as padding.</p>
+<p>margin: 20px auto; - browser will centre on the horizontal</p>
+<hr>
+<h2>Standard box model</h2>
+<p>In the standard box model, if you set width and height property values on a box, these values define the width and height of the content box. Any padding and borders are then added to those dimensions to get the total size taken up by the box (see the image below).</p>
+<img src="../images/standardBoxModel.png" height="125" alt="CSS code">
+<p>The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).</p>
+<img src="../images/standardBoxModel2.png" height="200" alt="CSS code">
+<hr>
+
+<h2>Alternative box model</h2>
+<p>In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the box.</p>
+<p>To turn on the alternative model for an element, set box-sizing: border-box on it:</p>
+<img src="../images/alternateBoxModel.png" height="175" alt="CSS code">
+<p>Now, the actual space taken up by the box will be 350px in the inline direction and 150px in the block direction.</p>
+<img src="../images/alternateBoxModel2.png" height="200" alt="">
+<hr>
+
+<h2>Display property</h2>
+<h3>Block</h3>
+<ul>
+    <li>Breaks onto a new line</li>
+    <li>Width and height are respected</li>
+    <li>Padding, margin, and border cause other elements to be pushed away from the box</li>
+    <li>The box extends in the inline direction to fill available space in container (unless styled otherwise)</li>
+</ul>
+<h3>Inline</h3>
+<ul>
+    <li>Box does not break onto a new line</li>
+    <li>Width and height do not apply</li>
+    <li>Vertical padding, margin, and borders apply but do not cause other inline elements to move away from the box</li>
+    <li>Horizontal padding, margin, and border will apply and cause other boxes to move away</li>
+</ul>
+
+<h3>Inline-block</h3>
+<ul>
+    <li>Hybrid of inline and block</li>
+    <li>box does not break onto new line</li>
+    <li>Width and height are respected</li>
+    <li>Padding, margin, and border will cause other elements to be pushed away from the box</li>
+</ul>
+<h3>Display-none</h3>
+<ul>
+    <li>display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them.</li>
+    <li>Turns off the display of an element so that it has no effect on layout (the document is rendered as though the element did not exist)</li>
+    <li>All descendant elements also have their display turned off.</li>
+</ul>
+<hr>
+
+<h2>Min & Max width</h2>
+<img src="../images/minMaxWidth.png" height="130" alt="CSS code">
+<p>The box will be 80% of its container, but will not get wider than 500px, or narrower than 300px.</p>
+<hr>
+
+<h2>Border radius</h2>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius">Link to mdn web docs - border-radius</a>
+<p>Order:</p>
+<ul>
+    <li>border-top-left-radius</li>
+    <li>border-top-right-radius</li>
+    <li>border-bottom-right-radius</li>
+    <li>border-bottom-left-radius</li>
+</ul>
+<p>Border radius examples:</p>
+<img src="../images/borderRadiusExamples.png" height="800" alt="CSS code">
+<hr>
+
+<h2>Box shadow</h2>
+<p>The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.</p>
+<img src="../images/boxShadow.png" height="600" alt="CSS code">
+<hr>
+
+<h2>Overflow</h2>
+<p>The overflow CSS shorthand property sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.</p>
+<img src="../images/overflow.png" height="280" alt="CSS code">
+<img src="../images/overlay2.png" height="400" alt="CSS overflow examples">
+</body>
+</html>
