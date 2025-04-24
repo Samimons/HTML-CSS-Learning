@@ -1,0 +1,42 @@
+h1{
+    color: red;
+}
+.hero {
+    color: blue;
+}
+button {
+    color: green;
+  }
+   
+  #btn {
+    color: blue
+  }
+  button #btn {
+    color: yellow;
+  }
+  .container p {
+    color: magenta;
+  }
+   
+  .container > p {
+    color: yellow;
+  }
+   
+  #quote {
+    color: cyan;
+  }
+  .pickle {
+    color: pink;
+  }
+   
+  div {
+    color: purple;
+  }
+   
+  .pickle {
+    color: red;
+  }
+   
+  #pickle {
+    color: green
+  }
